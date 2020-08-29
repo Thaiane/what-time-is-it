@@ -15,11 +15,13 @@
       <div class="infos">
         <div class="info-sf">
           <h2>SF</h2>
-          <p>Hora: ${timeSF}</p>
-          <p>Tempo: 35 graus</p>
-        </div>
+          <script>
+            let timeSF = new Date()
+            document.body.innerHTML = `<p> Hora: ${timeSF}</p>`;
+          </script>
+        </div>`
         <div class="info-poa">
-          <h2>POA</h2>
+          <h2>POA</h2>`
           <p>Hora: 14h00</p>
           <p>Tempo: 23 graus</p>
         </div>
