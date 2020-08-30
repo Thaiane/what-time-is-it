@@ -5,29 +5,33 @@
   <link rel="stylesheet" href="css/style.css">
   <title>Que horas é ai mesmo?</title>
   <meta name="viewport" content="width=device-width" />
+  <script src="js/time.js"></script>
 </head>
-
 <body>
   <main>
+    <script>
+      document.getElementById("demo").innerHTML = "Hello JavaScript!";
+    </script>
     <section class="central">
       <h1>Que horas é ai mesmo?</h1>
 
       <div class="infos">
         <div class="info-sf">
           <h2>SF</h2>
-          <script>
-            let timeSF = new Date()
-            document.body.innerHTML = `<p> Hora: ${timeSF}</p>`;
-          </script>
-        </div>`
+          <p id="demo"></p>
+          <p>Tempo: 23 graus </p>
+
+        </div>
         <div class="info-poa">
-          <h2>POA</h2>`
+          <h2>POA</h2>
           <p>Hora: 14h00</p>
           <p>Tempo: 23 graus</p>
         </div>
       </div>
     </section>
   </main>
-<script src="js/time.js"></script>
+  <script>
+    document.getElementById("demo").innerHTML = "Hello JavaScript!";
+  </script>
 </body>
 </html>
