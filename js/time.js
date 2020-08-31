@@ -1,3 +1,4 @@
 function myFunction() {
-  document.getElementById("demo").innerHTML = "Paragraph changed.";
-};
+    let time = new Date();
+    return document.getElementById("demo").innerHTML = "Hora " + time;
+}
