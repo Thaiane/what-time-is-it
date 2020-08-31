@@ -1,1 +1,3 @@
-export document.getElementById("demo").innerHtml = "Hello JavaScript!";
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Paragraph changed.";
+};
