@@ -26,13 +26,4 @@ function currentTime() {
     var t = setTimeout(function(){ currentTime() }, 1000); /* setting timer */
 }
 
-function updateTime(k) {
-  if (k < 10) {
-    return "0" + k;
-  }
-  else {
-    return k;
-  }
-}
-
 currentTime();
