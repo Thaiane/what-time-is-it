@@ -22,6 +22,7 @@
 .info-sf {
     margin: 200px;
     font-size: 1em;
+    min-height: 100px;
     background-color: lightgray;
     padding: 20px;
 }
