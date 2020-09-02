@@ -17,6 +17,6 @@ function timePOA() {
 }
 
 function updateTime() {
-    setTimeout(function(){ timePOA() }, 1000);
-    setTimeout(function(){ timeSF() }, 1000);
+    setInterval(function(){ timePOA() }, 1000);
+    setInterval(function(){ timeSF() }, 1000);
 };
