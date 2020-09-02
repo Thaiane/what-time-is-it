@@ -9,13 +9,17 @@
 </head>
 <body>
   <main>
+    <script>
+      setTimeout(function(){ timePOA() }, 1000);
+      setTimeout(function(){ timeSF() }, 1000);
+    </script>
     <section class="central">
       <h1>Que horas é ai mesmo?</h1>
       <div class="infos">
         <div class="info-sf">
           <h2>SF</h2>
           <p id="timeSF"></p>
-          <p id="clock">Tempo: 23 graus </p>
+          <p>Tempo: 33 graus</p>
           <button type="button" onclick="timeSF()">Atualizar</button>
 
         </div>
@@ -28,8 +32,5 @@
       </div>
     </section>
   </main>
-  <script>
-    document.getElementById("demo").innerHTML = "Hello JavaScript!";
-  </script>
 </body>
 </html>
