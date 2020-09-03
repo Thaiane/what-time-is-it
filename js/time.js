@@ -1,27 +1,18 @@
-// const Timezone = Object.freeze({
-//     SF: ["en-US", "America/Los_Angeles"],
-//     POA: ["pt-BR", "America/Sao_Paulo"]
-// });
+const Timezonee = Object.freeze({
+    SF: ["pt-br", "America/Los_Angeles"],
+    POA: ["pt-br", "America/Sao_Paulo"]
+});
 
-function timeSF() {
-    let hour = new Date().getHours() - 4;
-    let min = new Date().getMinutes();
-    let minFormatt = ("00" + min).slice(-2);
+// como importar timezone e como passar parametros do index pro js
 
-    document.getElementById("timeSF").innerHTML = "Hora " + hour + "h" + minFormatt;
+function createTime(timezone) {
+    const [locale, timeZone] = timezone
+
+    let date = new Date().toLocaleTimeString(locale, {timeZone: "America/Los_Angeles"})
+    document.getElementById("timePOA").innerHTML = "Hora " + date;
 }
 
-// function timePOA() {
-//     let hour = new Date().getHours();
-//     let min = new Date().getMinutes();
-//     let minFormatt = ("00" + min).slice(-2);
-//
-//     document.getElementById("timePOA").innerHTML = "Hora " + hour + "h" + minFormatt;
-// }
-//
-//
-
 (function() {
-    setInterval(function(){ timePOA() }, 1000);
-    setInterval(function(){ timeSF() }, 1000);
+    setInterval(function(){ createTime(Timezonee.POA) }, 1000);
+    setInterval(function(){ createTime(Timezonee.SF) }, 1000);
 })();

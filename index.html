@@ -9,20 +9,24 @@
 </head>
 <body>
   <main>
+    <script>
+      const Timezone = Object.freeze({
+        SF: ["pt-br", "America/Los_Angeles"],
+        POA: ["pt-br", "America/Sao_Paulo"]
+      });
+    </script>
     <section class="central">
       <h1>Que horas é ai mesmo?</h1>
       <div class="infos">
         <div class="info-sf">
           <h2>SF</h2>
           <p id="timeSF"></p>
-          <p>Tempo: 33 graus</p>
-          <button type="button" onclick="timeSF()">Atualizar</button>
+          <button type="button" onclick="createTime(Timezone.SF)">Atualizar</button>
         </div>
         <div class="info-poa">
           <h2>POA</h2>
           <p id="timePOA"></p>
-          <p>Tempo: 23 graus</p>
-          <button type="button" onclick="timePOA()">Atualizar</button>
+          <button type="button" onclick="createTime(Timezone.POA)">Atualizar</button>
         </div>
       </div>
     </section>
