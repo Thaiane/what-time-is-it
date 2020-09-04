@@ -1,18 +1,20 @@
-const Timezonee = Object.freeze({
+const Timezone = Object.freeze({
     SF: ["pt-br", "America/Los_Angeles"],
     POA: ["pt-br", "America/Sao_Paulo"]
 });
 
-// como importar timezone e como passar parametros do index pro js
-
-function createTime(timezone) {
+function createTime(timezone, fn) {
     const [locale, timeZone] = timezone
 
     let date = new Date().toLocaleTimeString(locale, {timeZone: "America/Los_Angeles"})
-    document.getElementById("timePOA").innerHTML = "Hora " + date;
+    document.getElementById("timePOA").innerHTML = "Hora: " + date;
+    fn(date)
 }
+// passar uma funcao para renderizar por lugar
 
-(function() {
-    setInterval(function(){ createTime(Timezonee.POA) }, 1000);
-    setInterval(function(){ createTime(Timezonee.SF) }, 1000);
-})();
+
+setInterval(function(){ createTime(Timezone.POA) }, 1000);
+setInterval(function(){ createTime(Timezone.SF) }, 1000);
+
+document.getElementById("atualizarFusoPOA").addEventListener("onclick", function() {createTime(Timezone.POA)})
+document.getElementById("atualizarFusoSF").addEventListener("onclick", function() {createTime(Timezone.SF)})
