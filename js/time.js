@@ -4,11 +4,11 @@ const Timezone = Object.freeze({
 });
 
 function atualizarFusoPOA(time) {
-    document.getElementById("timePOA").innerHTML = "Hora: " + time;
+    document.getElementById("timePOA").innerHTML = "Local time: " + time;
 }
 
 function atualizarFusoSF(time) {
-    document.getElementById("timeSF").innerHTML = "Hora: " + time;
+    document.getElementById("timeSF").innerHTML = "Local time: " + time;
 }
 
 function createTime(timezone, atualizarFuso) {

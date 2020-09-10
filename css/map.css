@@ -334,15 +334,16 @@ background: linear-gradient(to left top, #35414e, #323d4a, #2f3a46, #2d3642, #2a
 .welcome h1 {
     margin: 5px 0;
     font-size: 9px;
-    letter-spacing: 12px;
+    letter-spacing: 15px;
     color: #2e3338;
 }
 .welcome h2 {
+    padding-top: 2px;
     font-size: 18px;
     letter-spacing: 5px;
     color: #94a6b8;
 }
-.welcome h2 span {
+.welcome h1 span {
     color: #2e3338;
     text-shadow: 0 0 0;
     animation: 3s letter infinite;

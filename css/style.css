@@ -1,6 +1,7 @@
 * {
     margin: 0;
-    padding: 0;
+    padding: 10px;
+    letter-spacing: 0.1em;
     font-family: 'Share Tech Mono', monospace;
     text-shadow: 0 0 20px rgba(10, 175, 230, 1),  0 0
 }
@@ -28,7 +29,9 @@ button {
 
 .info-poa,
 .info-sf {
-    margin: 100px;
+    margin-top: 80px;
+    margin-left: 100px;
+    margin-right: 100px;
     font-size: 1em;
     min-height: 100px;
     background-color: transparent;
