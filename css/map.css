@@ -16,7 +16,7 @@ html, body {
     position: relative;
     min-width: 1400px;
     height: calc(100vh - 100px);
-    background: #21262c;
+background: linear-gradient(to left top, #35414e, #323d4a, #2f3a46, #2d3642, #2a333e, #27303a, #252c35, #222931, #1e242b, #1b2026, #171b20, #14171b);
 }
 .back::after {
     left: 0;
