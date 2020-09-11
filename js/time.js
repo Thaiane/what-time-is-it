@@ -29,12 +29,12 @@ setInterval(function(){ createTime(Timezone.POA, atualizarFusoPOA) }, 1000);
 setInterval(function(){ createTime(Timezone.SF, atualizarFusoSF) }, 1000);
 
 function getWeather() {
-    return fetch('https://community-open-weather-map.p.rapidapi.com/weather')
-        .then(res => console.log(res))
+    return fetch('https://api.openweathermap.org/data/2.5/onecall?lat=33.441792&lon=-94.037689&exclude=hourly,daily&appid=bacf99c899e78364efe9550df9f8d2cb')
+        .then(res => console.log('foi'))
         .catch(rej => console.log(`Errrooouuuu`))
 };
 
-//getWeather();
+// getWeather();
 
 
 
