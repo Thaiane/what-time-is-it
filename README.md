@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to Que horas é ai mesmo?</h1>
+<h1 align="center">What time is it?</h1>
 <p>
   <a href="https://twitter.com/ThaiiBraga" target="_blank">
     <img alt="Twitter: ThaiiBraga" src="https://img.shields.io/twitter/follow/ThaiiBraga.svg?style=social" />
