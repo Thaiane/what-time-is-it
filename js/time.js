@@ -3,6 +3,11 @@ const Timezone = Object.freeze({
     POA: ["pt-br", "America/Sao_Paulo"]
 });
 
+const Coordinates = Object.freeze({
+    SF: [37.773972, -122.431297],
+    POA: [-30.0346, -51.2177]
+})
+
 function atualizarFusoPOA(time) {
     document.getElementById("timePOA").innerHTML = "Local time: " + time;
 }
@@ -28,13 +33,19 @@ document.getElementById("atualizarFusoSF").addEventListener("onclick", function(
 setInterval(function(){ createTime(Timezone.POA, atualizarFusoPOA) }, 1000);
 setInterval(function(){ createTime(Timezone.SF, atualizarFusoSF) }, 1000);
 
-function getWeather() {
-    return fetch('https://api.openweathermap.org/data/2.5/onecall?lat=33.441792&lon=-94.037689&exclude=hourly,daily&appid=bacf99c899e78364efe9550df9f8d2cb')
-        .then(res => console.log('foi'))
-        .catch(rej => console.log(`Errrooouuuu`))
+function getWeather(latitude, longitude) {
+    return fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&units=metric&exclude=hourly,daily&appid=bacf99c899e78364efe9550df9f8d2cb`)
 };
 
-// getWeather();
+function atualizarClimaPOA(clima) {
+    const formattClima = `${Math.round(clima)}ºC`
+    document.getElementById("weatherPOA").innerHTML = `Temperatura: ${formattClima}`;
+}
+
+getWeather(...Coordinates.POA)
+    .then(res => res.json())
+    .then(weatherAPIData => atualizarClimaPOA(weatherAPIData.current.temp))
+
 
 
 
