@@ -42,22 +42,17 @@ function atualizarClimaPOA(clima) {
     document.getElementById("weatherPOA").innerHTML = `Temperatura: ${formattClima}`;
 }
 
-getWeather(...Coordinates.POA)
-    .then(res => res.json())
-    .then(weatherAPIData => atualizarClimaPOA(weatherAPIData.current.temp))
+function atualizarClimaSF(clima) {
+    const formattClima = `${Math.round(clima)}ºC`
+    document.getElementById("weatherSF").innerHTML = `Temperatura: ${formattClima}`;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+Promise.all([getWeather(...Coordinates.POA), getWeather(...Coordinates.SF)])
+  .then(responses => Promise.all(responses.map(r => r.json())))
+  .then(([poaWeather, sfWeather]) => {
+      atualizarClimaPOA(poaWeather.current.temp)
+      atualizarClimaSF(sfWeather.current.temp)
+  })
 
 
 
