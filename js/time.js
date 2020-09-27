@@ -83,7 +83,7 @@ count  = 0,
 size   = 2,
 speed  = 10,
 lights = [],
-colors = ['hsl(210 15% 10%)'],
+colors = ['hsl(211, 13%, 48%'],
 
 init = () => {
   for (var i = 0; i < arc; i++) {
