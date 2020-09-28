@@ -39,12 +39,12 @@ function getWeather(latitude, longitude) {
 
 function atualizarClimaPOA(clima) {
     const formattClima = `${Math.round(clima)}ºC`
-    document.getElementById("weatherPOA").innerHTML = `Temperatura: ${formattClima}`;
+    document.getElementById("weatherPOA").innerHTML = `temperature: ${formattClima}`;
 }
 
 function atualizarClimaSF(clima) {
     const formattClima = `${Math.round(clima)}ºC`
-    document.getElementById("weatherSF").innerHTML = `Temperatura: ${formattClima}`;
+    document.getElementById("weatherSF").innerHTML = `temperature: ${formattClima}`;
 }
 
 Promise.all([getWeather(...Coordinates.POA), getWeather(...Coordinates.SF)])
