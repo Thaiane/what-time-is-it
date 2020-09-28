@@ -38,13 +38,18 @@ function getWeather(latitude, longitude) {
 };
 
 function atualizarClimaPOA(clima) {
-    const formattClima = `${Math.round(clima)}ºC`
-    document.getElementById("weatherPOA").innerHTML = `temperature: ${formattClima}`;
+    climaF= (clima * 1.8000) + 32;
+    const formattClimaEN = `${Math.round(climaF)}ºF`
+    const formattClimaPT = `${Math.round(clima)}ºC`
+    document.getElementById("weatherPOA").innerHTML = `Weather: ${formattClimaEN} / ${formattClimaPT}`;
 }
 
 function atualizarClimaSF(clima) {
-    const formattClima = `${Math.round(clima)}ºC`
-    document.getElementById("weatherSF").innerHTML = `temperature: ${formattClima}`;
+console.log(clima)
+    climaF= (clima * 1.8000) + 32;
+    const formattClimaEN = `${Math.round(climaF)}ºF`
+    const formattClimaPT = `${Math.round(clima)}ºC`
+    document.getElementById("weatherSF").innerHTML = `Weather: ${formattClimaEN} / ${formattClimaPT}`;
 }
 
 Promise.all([getWeather(...Coordinates.POA), getWeather(...Coordinates.SF)])
