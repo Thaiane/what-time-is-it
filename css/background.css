@@ -17,20 +17,8 @@ html, body {
     min-width: 1400px;
     height: calc(100vh - 100px);
     background: linear-gradient(to left top, #35414e, #323d4a, #2f3a46, #2d3642, #2a333e, #27303a, #252c35, #222931, #1e242b, #1b2026, #171b20, #14171b);
-    /*background-image: linear-gradient(to right top, #ffffff, #fff5ff, #ffe9ee, #ffe1cf, #ffe2b0, #f8e1a0, #ede191, #dfe184, #d4d77c, #c9cd74, #bfc36d, #b4b965);*/
-
-    /*background-image: linear-gradient(to right bottom, #6cafe7, #7bb6e7, #8abce7, #97c3e8, #a5c9e8, #a5c9e8, #a5c9e8, #a5c9e8, #97c3e8, #8abce7, #7bb6e7, #6cafe7);*/
-/*background: linear-gradient(to left top, #35414e, #323d4a, #2f3a46, #2d3642, #2a333e, #27303a, #252c35, #222931, #1e242b, #1b2026, #171b20, #14171b);*/
 }
-/*
-noite noite  - BR 11pm
-background: linear-gradient(to left top, #35414e, #323d4a, #2f3a46, #2d3642, #2a333e, #27303a, #252c35, #222931, #1e242b, #1b2026, #171b20, #14171b);
-noite dia    - BR 7am
-    background-image: linear-gradient(to right, #27303a, #28323d, #293440, #2b3643, #2c3846, #324152, #374a5f, #3d546c, #496887, #547da3, #6093bf, #6ba9dd);
 
-dia dia      - BR 11am
-dia noite    - BR 7pm
-*/
 .back::after {
     left: 0;
     bottom: 0;
