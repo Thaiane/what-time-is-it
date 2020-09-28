@@ -7,7 +7,7 @@
 
 ### ✨ [Demo](https://thaiane.github.io/what-time-is-it/)
 
-<img alt="Demo do site" align='center' width='400px' src='./img/clock.gif'>
+<img alt="Demo do site" align='center' width='500px' src='./img/whattimeisit.gif'>
 
 ## Author
 
